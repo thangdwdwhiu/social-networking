@@ -1,0 +1,15 @@
+# Node / Next.js
+node_modules/
+.next/
+.env.local
+.env
+
+# Java / Quarkus
+target/
+*.log
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
