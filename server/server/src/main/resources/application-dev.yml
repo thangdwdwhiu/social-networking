@@ -1,0 +1,22 @@
+quarkus:
+  http:
+    port: ${PORT:8080}
+    cors:
+      enabled: true
+      origins: "*"
+      methods: "GET,PUT,POST,DELETE,OPTIONS"
+      headers: "Content-Type,Authorization,X-Requested-With"
+      expose-headers: "Content-Type,Authorization"
+      allow-credentials: true
+      max-age: 86400
+  datasource:
+    db-kind: postgresql
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:password}
+    jdbc:
+      url: ${DB_URL}
+  hibernate-orm:
+    database:
+      generation: update
+    log:
+      sql: true
